@@ -63,23 +63,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-/*
-        mRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                String value = dataSnapshot.getValue(String.class);
-                listServices.add(value);
-
-                adapter.notifyDataSetChanged();
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-            }
-        });
-    }
-}
-*/
 
         mRef.addChildEventListener(new ChildEventListener() {
             @Override
@@ -132,8 +115,14 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         //noinspection SimplifiableIfStatement
-        else if (id == R.id.action_aboutus) {
+        if (id == R.id.action_aboutus) {
             Intent intent = new Intent(this, aboutActivity.class);
+            this.startActivity(intent);
+            return true;
+        }
+
+        if (id == R.id.action_feedback) {
+            Intent intent = new Intent(this, feedbackActivity.class);
             this.startActivity(intent);
             return true;
         }

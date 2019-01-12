@@ -12,4 +12,9 @@
         android:orderInCategory="101"
         android:title="@string/action_contactus"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/action_feedback"
+        android:orderInCategory="101"
+        android:title="Feedback"
+        app:showAsAction="never" />
 </menu>
